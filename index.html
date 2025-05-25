@@ -4,37 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather app</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Englebert&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display&family=Open+Sans=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city" />
-        <input type="submit" />
-      </form>
-      <hr />
-    </header>
-    <main>
-      <div>
-        <h1 class="city">Las Vegas</h1>
+    <div class="app-design">
+      <header>
+        <h1 class="title">Climora</h1>
+        <h2>Stay Ahead of the Weather</h2>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            class="search-bar"
+          />
+          <input type="submit" class="button" />
+        </form>
+
+        <br />
         <hr />
+        <div class="weather-information">
+          <h1 class="city">Las Vegas</h1>
+          <div class="degrees">26°C</div>
+        </div>
+      </header>
+      <main>
         <p>
           <span class="date">
             Saturday, 24 May 2025 <br />
             15:17</span
           >
         </p>
-        <div class="degrees">26°C</div>
-        <div class="sky">Scatterd Clouds</div>
 
         <p>
+          <span class="weather-conditions">Scatterd Clouds</span>
           Humidity: <span class="wind-humid">87%</span>, Wind:
           <span class="wind-humid">7.2km/h</span>
         </p>
-        <div class="forecast">
-          <ul>
+        <div>
+          <ul class="forecast">
             <li>
-              <span class="day">Sunday </span><span class="high">26° </span
-              ><span class="low">15°</span>
+              <span class="day">Sunday </span>
+              <span class="high">26° </span>
+              <span class="low">15°</span>
             </li>
             <li>
               <span class="day">Monday </span> <span class="high">25° </span
@@ -54,23 +71,24 @@
             </li>
           </ul>
         </div>
-      </div>
-      <hr />
-    </main>
 
-    <footer>
-      This project was coded by
-      <a href="https://github.com/oyin-ahmed" target="_blank"> Oyin Ahmed</a>,
-      and is
-      <a
-        href="https://github.com/oyin-ahmed/weather-project-shecodes"
-        target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and hosted
-      <a href="https://weather-app-niyo.netlify.app/" target="_blank"
-        >on Netlify</a
-      >
-    </footer>
+        <hr />
+      </main>
+
+      <footer>
+        This project was coded by
+        <a href="https://github.com/oyin-ahmed" target="_blank"> Oyin Ahmed</a>,
+        and is
+        <a
+          href="https://github.com/oyin-ahmed/weather-project-shecodes"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and hosted
+        <a href="https://weather-app-niyo.netlify.app/" target="_blank"
+          >on Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>

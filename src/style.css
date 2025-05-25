@@ -1,0 +1,84 @@
+body {
+  background: #326871;
+  color: #6f5a44;
+}
+.app-design {
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  background-color: #eeebe1;
+  max-width: 600px;
+  font-family: "Playfair Display", serif;
+}
+.title {
+  font-size: 56px;
+  margin: 0;
+}
+h2 {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: italic;
+}
+.city {
+  font-size: 48px;
+}
+
+main {
+  margin-top: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+.weather-information {
+  display: flex;
+  justify-content: space-between;
+}
+.degrees {
+  font-size: 56px;
+}
+.search-bar {
+  margin-top: 10px;
+  padding: 5px 24px;
+  border: solid 2px #6f5a44;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+.button {
+  padding: 5px 20px;
+  border: solid 2px #275057;
+  background-color: #326871;
+  color: #eeebe1;
+  border-radius: 4px;
+  transition: ease-in-out 250ms;
+}
+.button:hover {
+  background-color: #45909d;
+  cursor: pointer;
+}
+
+.forecast {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.forecast li {
+  text-align: center;
+  display: flex;
+  margin-right: 10px;
+  flex-direction: column;
+}
+.day {
+  padding: 5px 10px;
+
+  border-radius: 8px;
+  font-weight: bold;
+}
+.day:hover {
+  background-color: rgba(111, 90, 68, 0.2);
+}
+a {
+  color: #326871;
+  text-decoration: none;
+  font-weight: bold;
+}
