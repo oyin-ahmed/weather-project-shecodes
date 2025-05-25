@@ -41,9 +41,19 @@ main {
   margin-top: 20px;
 }
 .degrees {
-  font-size: 56px;
+  font-size: 68px;
+  position: relative;
+  top: 0px;
   margin: 0px;
   line-height: 1;
+  font-weight: 100;
+}
+.celcius {
+  position: relative;
+  top: -22px;
+  left: -5px;
+  font-size: 42px;
+  font-weight: bold;
 }
 .time {
   margin-top: -20px;
