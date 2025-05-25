@@ -22,18 +22,19 @@
       <header>
         <h1 class="title">Climora</h1>
         <h2>Stay Ahead of the Weather</h2>
-        <form>
+        <form id="form">
           <input
             type="search"
             placeholder="Enter a city.."
             class="search-bar"
+            id="city-input"
           />
           <input type="submit" class="button" />
         </form>
         <br />
         <hr />
         <div class="weather-information">
-          <h1 class="city">Las Vegas</h1>
+          <h1 class="city" id="city">Las Vegas</h1>
           <div class="degrees">26°C</div>
         </div>
       </header>
@@ -93,5 +94,6 @@
         >
       </footer>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
