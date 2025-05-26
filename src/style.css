@@ -5,39 +5,20 @@ body {
   padding: 0;
   font-family: "Playfair Display", serif;
   height: 100vh;
-  overflow: hidden;
-}
-.app-design {
-  margin: 0px 0px 50px 0px auto;
-  padding: 30px;
-  height: 100vh;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
-  background-color: #eeebe1;
-  max-width: 600px;
-  font-family: "Playfair Display", serif;
-  flex-direction: column;
-  display: flex;
-}
-.weather-layout {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-}
-.weather-visual {
-  flex: 1;
-  background-color: #326871;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.weather-visual img {
-  width: 80%;
-  max-width: 400px;
-  height: auto;
-  object-fit: contain;
+.app-design {
+  margin: 50px auto;
+  padding: 45px;
+  min-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  background-color: #eeebe1;
+  font-family: "Playfair Display", serif;
 }
+
 .title {
   font-size: 56px;
   margin: 0;
@@ -51,12 +32,17 @@ h2 {
 .city {
   font-size: 50px;
   margin-top: 0;
-  line-height: 1;
-  transform: translateY(-10px);
+  line-height: 1.2;
+  text-align: left;
 }
-
+header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 main {
   font-family: "Open Sans", sans-serif;
+  margin-top: 0;
+  padding-top: 0;
 }
 .weather-information {
   display: flex;
@@ -64,19 +50,26 @@ main {
   align-items: center;
   margin-top: 20px;
 }
-.degrees {
-  font-size: 68px;
+.weather-icon {
   position: relative;
-  top: 0px;
+  top: -175px;
+  left: 455px;
+  height: auto;
+  margin-left: 20px;
+}
+.degrees {
+  font-size: 56px;
+  position: relative;
+  top: -200px;
   margin: 0px;
   line-height: 1;
   font-weight: 100;
 }
 .celcius {
   position: relative;
-  top: -22px;
+  top: -225px;
   left: -5px;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: bold;
 }
 .time {
@@ -106,6 +99,7 @@ main {
 }
 
 .forecast {
+  margin: 0;
   list-style: none;
   padding: 0;
   display: flex;

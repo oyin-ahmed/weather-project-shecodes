@@ -34,15 +34,7 @@
           </form>
           <br />
           <hr />
-          <div class="weather-information">
-            <h1 class="city" id="city">Las Vegas</h1>
-            <div class="temprature">
-              <span class="degrees">26 </span>
-              <span class="celcius">°C</span>
-            </div>
-          </div>
-        </header>
-        <main>
+          <h1 class="city" id="city">Las Vegas</h1>
           <div class="date-block">
             <div class="time">15:17</div>
             <div class="date">Saturday, 24 May 2025</div>
@@ -53,7 +45,22 @@
             Humidity: <span class="wind-humid" id="humidity">87%</span>, Wind:
             <span class="wind-humid" id="wind">7.2km/h</span>
           </p>
-          <hr />
+          <div class="weather-information">
+            <div class="weather-visual" id="icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+                class="weather-icon"
+                id="weather-icon"
+              />
+            </div>
+            <div class="temprature">
+              <span class="degrees">26 </span>
+              <span class="celcius">°C</span>
+            </div>
+          </div>
+        </header>
+        <hr />
+        <main>
           <div>
             <ul class="forecast">
               <li>
@@ -106,13 +113,6 @@
             >on Netlify</a
           >
         </footer>
-      </div>
-      <div class="weather-visual" id="icon">
-        <img
-          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
-          class="weather-icon"
-          id="weather-icon"
-        />
       </div>
     </div>
     <script src="src/app.js"></script>
