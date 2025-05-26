@@ -7,10 +7,17 @@ function updateTemprature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let wind = Math.round(response.data.wind.speed * 10) / 10;
+  let icon = document.querySelector("#icon");
+  let iconImage = `  <img
+          src="${response.data.condition.icon_url}"
+          class="weather-icon"
+          id="weather-icon"
+        />`;
   cityElement.innerHTML = response.data.city;
   weatherDescription.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
+  icon.innerHTML = `${iconImage}`;
 }
 function searchCity(city) {
   let apiKey = "603213a20od31054bbtafc903709b865";
