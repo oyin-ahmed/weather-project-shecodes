@@ -3,7 +3,14 @@ function updateTemprature(response) {
   let degrees = document.querySelector(".degrees");
   degrees.innerHTML = `${tempEle}`;
   let cityElement = document.querySelector("#city");
+  let weatherDescription = document.querySelector(".weather-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let wind = Math.round(response.data.wind.speed * 10) / 10;
   cityElement.innerHTML = response.data.city;
+  weatherDescription.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${wind}km/h`;
 }
 function searchCity(city) {
   let apiKey = "603213a20od31054bbtafc903709b865";
@@ -18,3 +25,47 @@ function changeCity(event) {
 }
 let searchFrom = document.querySelector("#form");
 searchFrom.addEventListener("submit", changeCity);
+
+let weekday = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let shortDay = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+let months = [
+  "January",
+  "Febuary",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+let now = new Date();
+let today = weekday[now.getDay()];
+let day = now.getDate();
+let month = months[now.getMonth()];
+let hour = new Date().getHours();
+let minutes = new Date().getMinutes();
+if (hour < 10) {
+  `0${hour}`;
+}
+if (minutes < 10) {
+  `0${minutes}`;
+}
+
+let formattedTime = `${hour}:${minutes}`;
+let fromattedDate = `${today}, ${day} ${month} ${now.getFullYear()}`;
+let time = document.querySelector(".time");
+let date = document.querySelector(".date");
+time.innerHTML = formattedTime;
+date.innerHTML = fromattedDate;
