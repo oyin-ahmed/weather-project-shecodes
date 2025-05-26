@@ -64,10 +64,10 @@ let month = months[now.getMonth()];
 let hour = new Date().getHours();
 let minutes = new Date().getMinutes();
 if (hour < 10) {
-  `0${hour}`;
+  hour = `0${hour}`;
 }
 if (minutes < 10) {
-  `0${minutes}`;
+  minutes = `0${minutes}`;
 }
 
 let formattedTime = `${hour}:${minutes}`;

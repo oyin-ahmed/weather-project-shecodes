@@ -1,18 +1,12 @@
 body {
   background: #326871;
   color: #6f5a44;
-  margin: 0;
-  padding: 0;
   font-family: "Playfair Display", serif;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .app-design {
-  margin: 50px auto;
+  margin: 30px auto;
+  max-width: 700px;
   padding: 45px;
-  min-width: 600px;
   border-radius: 10px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
   background-color: #eeebe1;
@@ -30,6 +24,7 @@ h2 {
   font-style: italic;
 }
 .city {
+  border-top: 1px solid #275057;
   font-size: 50px;
   margin-top: 0;
   line-height: 1.2;
@@ -44,6 +39,11 @@ main {
   margin-top: 0;
   padding-top: 0;
 }
+footer {
+  border-top: 1px solid #275057;
+  padding: 30px 0 0 0;
+  text-align: center;
+}
 .weather-information {
   display: flex;
   justify-content: space-between;
@@ -52,8 +52,8 @@ main {
 }
 .weather-icon {
   position: relative;
-  top: -175px;
-  left: 455px;
+  top: -190px;
+  left: 475px;
   height: auto;
   margin-left: 20px;
 }
