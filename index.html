@@ -21,9 +21,11 @@
     <div class="weather-layout">
       <div class="app-design">
         <header>
-          <h1 class="title">Climora</h1>
-          <h2>Stay Ahead of the Weather</h2>
-          <form id="form">
+          <div class="heading">
+            <h1 class="title">Climora</h1>
+            <h2>Stay Ahead of the Weather</h2>
+          </div>
+          <form id="form" class="form">
             <input
               type="search"
               placeholder="Enter a city.."
@@ -32,31 +34,31 @@
             />
             <input type="submit" class="button" />
           </form>
-          <br />
-          <h1 class="city" id="city">Las Vegas</h1>
           <div class="date-block">
             <div class="time">15:17</div>
             <div class="date">Saturday, 24 May 2025</div>
           </div>
-
+          <br />
+          <div class="main-content">
+            <h1 class="city" id="city">Las Vegas</h1>
+            <div class="weather-information">
+              <div class="weather-visual" id="icon">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+                  class="weather-icon"
+                  id="weather-icon"
+                />
+              </div>
+              <div class="temprature">
+                <span class="degrees">26<span class="celcius"></span>°C</span>
+              </div>
+            </div>
+          </div>
           <p class="conditions">
             <span class="weather-description">Scattered Clouds</span><br />
             Humidity: <span class="wind-humid" id="humidity">87%</span>, Wind:
             <span class="wind-humid" id="wind">7.2km/h</span>
           </p>
-          <div class="weather-information">
-            <div class="weather-visual" id="icon">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
-                class="weather-icon"
-                id="weather-icon"
-              />
-            </div>
-            <div class="temprature">
-              <span class="degrees">26 </span>
-              <span class="celcius">°C</span>
-            </div>
-          </div>
         </header>
         <main>
           <div class="weather-forecast">

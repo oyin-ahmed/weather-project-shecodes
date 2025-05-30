@@ -1,7 +1,7 @@
 function updateTemprature(response) {
   let tempEle = Math.round(response.data.temperature.current);
   let degrees = document.querySelector(".degrees");
-  degrees.innerHTML = `${tempEle}`;
+  degrees.innerHTML = `${tempEle}°`;
   let cityElement = document.querySelector("#city");
   let weatherDescription = document.querySelector(".weather-description");
   let humidityElement = document.querySelector("#humidity");

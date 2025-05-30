@@ -1,26 +1,41 @@
 body {
-  background: #326871;
+  background: #eeebe1;
   color: #6f5a44;
   font-family: "Playfair Display", serif;
-}
-.app-design {
-  margin: 30px auto;
-  max-width: 700px;
-  padding: 45px;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
-  background-color: #eeebe1;
-  font-family: "Playfair Display", serif;
+  margin: 50px;
 }
 
+.heading {
+  text-align: center;
+}
+.form {
+  position: relative;
+  right: 0px;
+  left: 950px;
+}
+.date-block {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(111, 90, 68, 0.4);
+}
 .title {
-  font-size: 56px;
+  font-size: 78px;
+  font-weight: 500;
   margin: 0;
 }
 h2 {
   margin-top: 0;
-  font-size: 32px;
-  font-weight: normal;
+  font-size: 38px;
+  font-weight: 100;
   font-style: italic;
 }
 .city {
@@ -28,7 +43,7 @@ h2 {
   font-size: 50px;
   margin-top: 0;
   line-height: 1.2;
-  text-align: left;
+  text-align: center;
 }
 header {
   margin-bottom: 0;
@@ -45,37 +60,26 @@ footer {
   text-align: center;
 }
 .weather-information {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
 }
 .weather-icon {
-  position: relative;
-  top: -190px;
-  left: 475px;
-  height: auto;
-  margin-left: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.temprature {
+  text-align: center;
 }
 .degrees {
   font-size: 56px;
-  position: relative;
-  top: -200px;
-  margin: 0px;
   line-height: 1;
   font-weight: 100;
 }
 .celcius {
-  position: relative;
-  top: -225px;
-  left: -5px;
   font-size: 32px;
   font-weight: bold;
 }
 .time {
-  margin-top: -20px;
-  font-size: 18px;
-  display: flex;
+  margin-bottom: 20px;
+  font-size: 36px;
   letter-spacing: 1px;
 }
 .search-bar {
