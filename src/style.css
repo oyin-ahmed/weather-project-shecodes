@@ -98,19 +98,15 @@ footer {
   cursor: pointer;
 }
 
-.forecast {
+.weather-forecast {
   margin: 0;
-  list-style: none;
   padding: 0;
   display: flex;
   justify-content: space-between;
-}
-.forecast li {
   text-align: center;
-  display: flex;
   margin-right: 10px;
-  flex-direction: column;
 }
+
 .wind-humid {
   color: #326871;
   font-weight: bold;
