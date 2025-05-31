@@ -25,6 +25,7 @@ h2 {
   margin-bottom: 20px;
 }
 .left-block {
+  margin-left: 20px;
   text-align: left;
 }
 
@@ -101,28 +102,31 @@ main {
   font-weight: bold;
 }
 .grid-content {
-  justify-content: center;
   display: grid;
   grid-template-columns: 150px 150px 150px;
-  gap: 30px;
+  gap: 150px;
+  justify-content: center;
   margin: 40px auto;
-  padding: 0 20px;
-  max-width: 500px;
+  max-width: 450px;
 }
 .weather-forecast {
   padding: 10px;
-  display: flex;
   justify-content: space-between;
   text-align: center;
 }
-
+.humidity-icon {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 100px;
+  height: auto;
+}
 .wind-humid {
   color: #326871;
   font-weight: bold;
 }
 .weather-forecast-day {
-  justify-content: space-between;
-  margin-left: 15px;
+  margin: 0px 50px;
   padding: 5px 10px;
   border-radius: 8px;
   font-weight: bold;
@@ -133,16 +137,11 @@ main {
   border: 0.5pt solid #45909d;
 }
 .forecast-content-block {
-  width: auto;
-  height: 150px;
+  width: fit-content;
   padding: 20px;
   margin: 20px;
   border-radius: 8px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: rgb(111, 90, 68, 0.4);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
@@ -156,15 +155,15 @@ a {
   font-weight: bold;
 }
 .content-block {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   padding: 20px;
+  margin: 20px;
   border-radius: 8px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   background-color: rgb(111, 90, 68, 0.4);
 }
