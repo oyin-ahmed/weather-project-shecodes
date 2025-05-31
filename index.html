@@ -21,88 +21,99 @@
     <div class="weather-layout">
       <div class="app-design">
         <header>
-          <div class="heading">
-            <h1 class="title">Climora</h1>
-            <h2>Stay Ahead of the Weather</h2>
-          </div>
-          <form id="form" class="form">
-            <input
-              type="search"
-              placeholder="Enter a city.."
-              class="search-bar"
-              id="city-input"
-            />
-            <input type="submit" class="button" />
-          </form>
-          <div class="date-block">
-            <div class="time">15:17</div>
-            <div class="date">Saturday, 24 May 2025</div>
-          </div>
-          <br />
-          <div class="main-content">
-            <h1 class="city" id="city">Las Vegas</h1>
-            <div class="weather-information">
-              <div class="weather-visual" id="icon">
-                <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
-                  class="weather-icon"
-                  id="weather-icon"
-                />
-              </div>
-              <div class="temprature">
-                <span class="degrees">26<span class="celcius"></span>°C</span>
+          <h1 class="title">Climora</h1>
+          <h2>Stay Ahead of the Weather</h2>
+
+          <div class="top-row">
+            <div class="content-block" class="left-block">
+              <div class="time">15:17</div>
+              <div class="date">Saturday, 24 May 2025</div>
+            </div>
+            <div class="center-content">
+              <h1 class="city" id="city">Las Vegas</h1>
+              <div class="weather-information">
+                <div class="weather-visual" id="icon">
+                  <img
+                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+                    class="weather-icon"
+                    id="weather-icon"
+                  />
+                </div>
+                <div class="temprature">
+                  <span class="degrees"> 26°</span>
+                  <span class="celcius">C</span>
+                </div>
               </div>
             </div>
+            <form id="form" class="form" required>
+              <input
+                type="search"
+                placeholder="Enter a city.."
+                class="search-bar"
+                id="city-input"
+              />
+              <input type="submit" class="button" />
+            </form>
           </div>
-          <p class="conditions">
-            <span class="weather-description">Scattered Clouds</span><br />
-            Humidity: <span class="wind-humid" id="humidity">87%</span>, Wind:
-            <span class="wind-humid" id="wind">7.2km/h</span>
-          </p>
+
+          <div class="grid-content">
+            <div class="content-block">
+              <span class="weather-description">Scattered Clouds</span>
+            </div>
+
+            <div class="content-block">
+              Humidity: <span class="wind-humid" id="humidity">87%</span>
+            </div>
+            <div class="content-block">
+              Wind: <span class="wind-humid" id="wind">7.2km/h</span>
+            </div>
+          </div>
         </header>
         <main>
-          <div class="weather-forecast">
-            <div class="weather-forecast-day">
-              <div class="forecast-date">Sun</div>
-              <div class="forecast-icon">☀️</div>
-              <div class="forecast-temps">
-                <div class="forecast-temp-high">26°</div>
-                <div class="forecast-tems-low">15°</div>
+          <div class="forecast-content-block">
+            <div class="weather-forecast">
+              <div class="weather-forecast-day">
+                <div class="forecast-date">Sun</div>
+                <div class="forecast-icon">☀️</div>
+                <div class="forecast-temps">
+                  <div class="forecast-temp-high">26°</div>
+                  <div class="forecast-tems-low">15°</div>
+                </div>
               </div>
-            </div>
-            <div class="weather-forecast-day">
-              <div class="forecast-date">Mon</div>
-              <div class="forecast-icon">☀️</div>
-              <div class="forecast-temps">
-                <div class="forecast-temp-high">26°</div>
-                <div class="forecast-tems-low">15°</div>
+              <div class="weather-forecast-day">
+                <div class="forecast-date">Mon</div>
+                <div class="forecast-icon">☀️</div>
+                <div class="forecast-temps">
+                  <div class="forecast-temp-high">26°</div>
+                  <div class="forecast-tems-low">15°</div>
+                </div>
               </div>
-            </div>
 
-            <div class="weather-forecast-day">
-              <div class="forecast-date">Tue</div>
-              <div class="forecast-icon">☀️</div>
-              <div class="forecast-temps">
-                <div class="forecast-temp-high">26°</div>
-                <div class="forecast-tems-low">15°</div>
+              <div class="weather-forecast-day">
+                <div class="forecast-date">Tue</div>
+                <div class="forecast-icon">☀️</div>
+                <div class="forecast-temps">
+                  <div class="forecast-temp-high">26°</div>
+                  <div class="forecast-tems-low">15°</div>
+                </div>
               </div>
-            </div>
 
-            <div class="weather-forecast-day">
-              <div class="forecast-date">Wed</div>
-              <div class="forecast-icon">☀️</div>
-              <div class="forecast-temps">
-                <div class="forecast-temp-high">26°</div>
-                <div class="forecast-tems-low">15°</div>
+              <div class="weather-forecast-day">
+                <div class="forecast-date">Wed</div>
+                <div class="forecast-icon">☀️</div>
+                <div class="forecast-temps">
+                  <div class="forecast-temp-high">26°</div>
+                  <div class="forecast-tems-low">15°</div>
+                </div>
               </div>
-            </div>
 
-            <div class="weather-forecast-day">
-              <div class="forecast-date">Thur</div>
-              <div class="forecast-icon">☀️</div>
-              <div class="forecast-temps">
-                <div class="forecast-temp-high">26°</div>
-                <div class="forecast-tems-low">15°</div>
+              <div class="weather-forecast-day">
+                <div class="forecast-date">Thur</div>
+                <div class="forecast-icon">☀️</div>
+                <div class="forecast-temps">
+                  <div class="forecast-temp-high">26°</div>
+                  <div class="forecast-tems-low">15°</div>
+                </div>
               </div>
             </div>
           </div>
