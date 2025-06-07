@@ -22,15 +22,14 @@ h2 {
   font-style: italic;
 }
 
-.left-block {
-  margin-left: 20px;
-  text-align: left;
-  flex: 1;
+.time-block {
+  text-align: right;
+  margin-bottom: 10px;
 }
 
 .time {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 48px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -41,18 +40,9 @@ h2 {
 .form {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   max-width: 100%;
 }
-.center-content {
-  margin-top: 20px;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 5px;
-}
+
 .search-bar {
   text-align: left;
   width: 300px;
@@ -84,7 +74,7 @@ h2 {
   height: auto;
 }
 .temprature {
-  margin: 0px;
+  margin-bottom: 20px;
 }
 .degrees {
   font-size: 76px;
@@ -97,21 +87,12 @@ h2 {
   font-size: 48px;
   font-weight: bold;
 }
-.grid-content {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-  margin: 0 auto;
-  padding: 0 20px;
 
-  max-width: 1000px;
-}
 .weather-forecast {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin-top: 30px;
+  margin: 10px;
 }
 .weather-icon {
   display: block;
@@ -133,9 +114,15 @@ h2 {
 .forecast-date {
   font-size: 20px;
 }
+.grid-content {
+  display: grid;
+  gap: 25px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
 .weather-forecast-day {
-  margin: 10px;
-  padding: 5px 10px;
+  margin: 6px 0px;
+  padding: 2px 6px;
   border-radius: 8px;
   font-weight: bold;
   transition: ease-in-out 250ms;
@@ -144,6 +131,11 @@ h2 {
   background-color: #eeebe199;
   border: 0.5pt solid #6f5a44;
 }
+.content-blocks-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
 .forecast-temp {
   font-size: 18px;
 }
@@ -151,9 +143,9 @@ h2 {
   font-weight: lighter;
 }
 .forecast-content-block {
-  width: fit-content;
+  width: 100%;
   justify-content: center;
-  padding: 15px 20px;
+  padding: 10px 12px;
   border-radius: 8px;
   text-align: center;
   background-color: rgb(111, 90, 68, 0.4);
@@ -181,9 +173,5 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   background-color: rgb(111, 90, 68, 0.4);
   aspect-ratio: 1 / 1;
-}
-.content-blocks-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  width: 100%;
 }

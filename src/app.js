@@ -1,7 +1,6 @@
 function updateTemprature(response) {
   let tempEle = Math.round(response.data.temperature.current);
   let degrees = document.querySelector(".degrees");
-  degrees.innerHTML = `${tempEle}°`;
   let cityElement = document.querySelector("#city");
   let weatherDescription = document.querySelector(".weather-description");
   let humidityElement = document.querySelector("#humidity");
@@ -13,6 +12,7 @@ function updateTemprature(response) {
           class="weather-icon"
           id="weather-icon"
         />`;
+         degrees.innerHTML = `${tempEle}°`;
   cityElement.innerHTML = response.data.city;
   weatherDescription.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
