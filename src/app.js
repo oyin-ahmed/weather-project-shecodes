@@ -12,7 +12,7 @@ function updateTemprature(response) {
           class="weather-icon"
           id="weather-icon"
         />`;
-         degrees.innerHTML = `${tempEle}°`;
+  degrees.innerHTML = `${tempEle}°`;
   cityElement.innerHTML = response.data.city;
   weatherDescription.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
@@ -30,6 +30,30 @@ function changeCity(event) {
 
   searchCity(cityInput.value);
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let shortDay = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let forecastHtml = "";
+  shortDay.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+              <div class="forecast-date">${day}</div>
+              <div class="forecast-icon">☀️</div>
+              <div class="forecast-temps">
+                <div class="forecast-temp">
+                  <span class="forecast-tems-high">26°</span>
+                  <span class="forecast-tems-low"> /15°</span>
+                </div>
+              </div>
+            </div>`;
+  });
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();
 let searchFrom = document.querySelector("#form");
 searchFrom.addEventListener("submit", changeCity);
 
@@ -42,7 +66,7 @@ let weekday = [
   "Friday",
   "Saturday",
 ];
-let shortDay = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
 let months = [
   "January",
   "Febuary",
