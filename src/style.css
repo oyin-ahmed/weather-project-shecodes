@@ -13,10 +13,11 @@ body {
   font-size: 78px;
   font-weight: 500;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 h2 {
-  margin-top: 0;
+  margin-top: 10px;
   font-size: 38px;
   font-weight: 100;
   font-style: italic;
@@ -40,6 +41,7 @@ h2 {
 .form {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   max-width: 100%;
 }
 
@@ -53,6 +55,7 @@ h2 {
   margin-right: 5px;
 }
 .button {
+  margin-left: 5px;
   padding: 10px 24px;
   border: solid 2px #275057;
   background-color: #326871;
@@ -88,12 +91,6 @@ h2 {
   font-weight: bold;
 }
 
-.weather-forecast {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin: 10px;
-}
 .weather-icon {
   display: block;
   margin: 0 auto;
@@ -120,9 +117,18 @@ h2 {
   margin: 0 auto;
   max-width: 1000px;
 }
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  gap: 10px;
+  margin: 10px 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
 .weather-forecast-day {
   margin: 6px 0px;
-  padding: 2px 6px;
+  padding: 2px 4px;
   border-radius: 8px;
   font-weight: bold;
   transition: ease-in-out 250ms;
@@ -135,6 +141,9 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 .forecast-temp {
   font-size: 18px;
@@ -144,15 +153,18 @@ h2 {
 }
 .forecast-content-block {
   width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
   justify-content: center;
   padding: 10px 12px;
   border-radius: 8px;
   text-align: center;
+  margin-bottom: 20px;
   background-color: rgb(111, 90, 68, 0.4);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 footer {
-  padding: 10px 0;
+  padding: 20px 0;
   text-align: center;
   margin-top: 20px;
 }
@@ -161,10 +173,12 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
+footer a:hover {
+  color: #23464d;
+}
 .content-block {
-  overflow: hidden;
   max-width: 200px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 8px;
   text-align: center;
   display: flex;
