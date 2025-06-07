@@ -1,5 +1,11 @@
-function updateTemprature(response) {
-  let tempEle = Math.round(response.data.temperature.current);
+function searchCity(city) {
+  let apiKey = "603213a20od31054bbtafc903709b865";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(updateTemperature);
+}
+
+function updateTemperature(response) {
+  let tempElement = Math.round(response.data.temperature.current);
   let degrees = document.querySelector(".degrees");
   let cityElement = document.querySelector("#city");
   let weatherDescription = document.querySelector(".weather-description");
@@ -7,53 +13,65 @@ function updateTemprature(response) {
   let windElement = document.querySelector("#wind");
   let wind = Math.round(response.data.wind.speed * 10) / 10;
   let icon = document.querySelector("#icon");
-  let iconImage = `  <img
-          src="${response.data.condition.icon_url}"
-          class="weather-icon"
-          id="weather-icon"
-        />`;
-  degrees.innerHTML = `${tempEle}°`;
+  let iconImage = `<img src="${response.data.condition.icon_url}" class="weather-icon" id="weather-icon" />`;
+  degrees.innerHTML = `${tempElement}°`;
   cityElement.innerHTML = response.data.city;
   weatherDescription.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
-  icon.innerHTML = `${iconImage}`;
+  icon.innerHTML = iconImage;
+  getForecast(response.data.city);
 }
-function searchCity(city) {
-  let apiKey = "603213a20od31054bbtafc903709b865";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(updateTemprature);
-}
+
 function changeCity(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
-
   searchCity(cityInput.value);
 }
 
-function displayForecast() {
-  let forecastElement = document.querySelector("#forecast");
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 
-  let shortDay = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+function getForecast(city) {
+  let apiKey = "603213a20od31054bbtafc903709b865";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastHtml = "";
-  shortDay.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `<div class="weather-forecast-day">
-              <div class="forecast-date">${day}</div>
-              <div class="forecast-icon">☀️</div>
+  response.data.daily.forEach(function (day, index) {
+    if (index > 0 && index < 6) {
+      forecastHtml =
+        forecastHtml +
+        `<div class="weather-forecast-day">
+              <div class="forecast-date">${formatDay(day.time)}</div>
+              <div class="forecast-icon">
+              <img src =" ${day.condition.icon_url}"/>
+              </div>
               <div class="forecast-temps">
                 <div class="forecast-temp">
-                  <span class="forecast-tems-high">26°</span>
-                  <span class="forecast-tems-low"> /15°</span>
+                  <span class="forecast-tems-high">${Math.round(
+                    day.temperature.maximum
+                  )}°</span>
+                  <span class="forecast-tems-low"> /${Math.round(
+                    day.temperature.minimum
+                  )}°</span>
                 </div>
               </div>
             </div>`;
+    }
   });
+  let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
+searchCity("Paris");
 
-displayForecast();
 let searchFrom = document.querySelector("#form");
 searchFrom.addEventListener("submit", changeCity);
 
@@ -69,7 +87,7 @@ let weekday = [
 
 let months = [
   "January",
-  "Febuary",
+  "February",
   "March",
   "April",
   "May",
