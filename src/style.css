@@ -120,10 +120,7 @@ h2 {
 .weather-forecast {
   display: flex;
   justify-content: space-between;
-  text-align: center;
   gap: 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
   width: 100%;
 }
 .weather-forecast-day {
@@ -138,10 +135,12 @@ h2 {
   border: 0.5pt solid #6f5a44;
 }
 .content-blocks-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 .forecast-temp {
   font-size: 18px;
@@ -172,15 +171,23 @@ a {
 footer a:hover {
   color: #23464d;
 }
+.content-blocks-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
 .content-block {
+  flex: 1 1 30%;
+  max-width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
   background-color: rgb(111, 90, 68, 0.4);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  width: 100%;
   aspect-ratio: 1 / 1;
 }
 .forecast-content-block,
@@ -188,6 +195,6 @@ footer a:hover {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
